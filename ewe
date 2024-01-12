@@ -20,7 +20,7 @@
             height: 400px;
             background-color: #000000;
             border-radius: 15px;
-            border: 1px solid #77160f; /* Set the color of the outline */
+            border: 1px solid #77160f;
             box-shadow: 0 0 50px rgba(0, 0, 0, 0);
             padding: 20px;
             text-align: center;
