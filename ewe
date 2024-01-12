@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owenn</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .gui-container {
+            width: 300px;
+            height: 400px;
+            background-color: #000000;
+            border-radius: 15px;
+            border: 1px solid #77160f; /* Set the color of the outline */
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0);
+            padding: 20px;
+            text-align: center;
+            opacity: 0.6; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="gui-container">
+        <head>
+            <title>GUI with Circular Image</title>
+            <style>
+                .circle-container {
+                    width: 150px;
+                    height: 150px;
+                    border: 2px solid #fffefd; /* Set the color of the outline */
+                    border-radius: 50%; /* Make the container circular */
+                    overflow: hidden; /* Ensure the image doesn't exceed the circular container */
+                    margin: 0 auto; /* Center the container horizontally */
+                    box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+                    opacity: 1; 
+                }
+        
+                .circle-container img {
+                    display: block;
+                    width: 100%; /* Make the image fill the circular container */
+                    height: auto; /* Maintain the image's aspect ratio */
+                }
+            </style>
+        </head>
+        <body>
+            <div class="circle-container">
+                <img src="https://cdn.discordapp.com/attachments/844306109875224626/1195074724733145129/466af7ec1d77d924f86fec05d7096ad9_1.png?ex=65b2ab11&is=65a03611&hm=c2b1e6e55d71f9e61e738917c7ff89cc89950d41e8f1d60df17223bbc8d8f18c&" alt="Your Image Description">
+            </div>
+        </body>
+<head>
+    <style>
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: -100% 50%; /* Change to -100% for a smoother loop */
+            }
+        }
+
+        .animated-gradient-text {
+            font-size: 32px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #77160f, #ffffff, #77160f); /* Set your gradient colors and direction */
+            background-size: 200% 100%; /* Increase the background size to cover the animation range */
+            color: transparent; /* Make the text transparent */
+            background-clip: text; /* Clip the background to the text */
+            animation: gradientAnimation 5s linear infinite; /* Set the animation duration, timing function, and loop */
+        }
+    </style>
+</head>
+<body>
+    <h2 class="animated-gradient-text">Owenn</h2>
+</body>
+<title>Typewriter Effect</title>
+<style>
+    #typewriter-text {
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: monospace;
+        color: #ffffff;
+    }
+</style>
+</head>
+<body>
+                <div id="typewriter-text"></div>
+            
+                <script>
+                    const texts = [
+                        "It's Beautiful.",
+                        "Eternal Youth.",
+                        "I feel alive."
+                    ];
+            
+                    const speed = 100;
+                    const typewriterText = document.getElementById("typewriter-text");
+                    let textIndex = 0;
+                    let charIndex = 0;
+                    let isDeleting = false;
+            
+                    function typeWriter() {
+                        const currentText = texts[textIndex];
+            
+                        if (isDeleting) {
+                            typewriterText.innerHTML = currentText.substring(0, charIndex - 1);
+                            charIndex--;
+                        } else {
+                            typewriterText.innerHTML = currentText.substring(0, charIndex + 1);
+                            charIndex++;
+                        }
+            
+                        if (!isDeleting && charIndex === currentText.length + 1) {
+                            isDeleting = true;
+                            setTimeout(typeWriter, 1000); // Wait before starting to delete
+                        } else if (isDeleting && charIndex === 0) {
+                            isDeleting = false;
+                            textIndex = (textIndex + 1) % texts.length;
+                            setTimeout(typeWriter, 500); // Wait before starting to type the next text
+                        } else {
+                            setTimeout(typeWriter, speed);
+                        }
+                    }
+            
+                    // Start the typewriter effect when the page loads
+                    window.onload = function () {
+                        typeWriter();
+                    };
+                </script>
+            </body>  
+        </p>
+    </div>
+</body>
+<head>
+    <title>Background Image Example</title>
+    <style>
+        body {
+            background-image: url('https://cdn.discordapp.com/attachments/844306109875224626/1195074505148739624/preview.jpg?ex=65b2aadd&is=65a035dd&hm=95e24bdae6d43d7e8947cdc27a7a2cdf9c724bc62760aa2ea936427a12ffebb4&'); /* Set the path to your image file */
+            background-size: cover; /* Adjust the size of the background image */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+  <title>Click Anywhere To Enter.</title>
+</head>
+<body>
+
+<div id="overlay" onclick="fadeOut()">
+  <p>Click Anywhere To Enter.</p>
+</div>
+
+<audio id="audio">
+  <source src="https://cdn.discordapp.com/attachments/1162965228888268910/1195064927610740826/spotifydown.com_-_I_Dont_Care.mp3?ex=65b2a1f1&is=65a02cf1&hm=39e7ec5ed8be31ed51cfdda1a178dc623a6c7c7b91f980db71716386d00661e5&" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  function fadeOut() {
+    var overlay = document.getElementById('overlay');
+    var audio = document.getElementById('audio');
+
+    // Fade out the overlay
+    overlay.style.transition = 'opacity 1s';
+    overlay.style.opacity = 0;
+
+    // Show and play the audio
+    audio.style.display = 'block';
+    audio.play();
+
+    // Remove the overlay after the transition
+    setTimeout(function() {
+      overlay.style.display = 'none';
+    }, 1000);
+  }
+</script>
+
+</body>
+</html>
+</html>
