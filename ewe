@@ -75,7 +75,7 @@
             background-size: 200% 100%; /* Increase the background size to cover the animation range */
             color: transparent; /* Make the text transparent */
             background-clip: text; /* Clip the background to the text */
-            animation: gradientAnimation 5s linear infinite; /* Set the animation duration, timing function, and loop */
+            animation: gradientAnimation 5s linear infinite;
         }
     </style>
 </head>
